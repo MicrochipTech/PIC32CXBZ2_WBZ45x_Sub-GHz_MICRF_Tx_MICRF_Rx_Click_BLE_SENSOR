@@ -1,12 +1,12 @@
-# PIC32CXBZ2_WBZ45x Sub-GHz MICRF112
+# PIC32CXBZ2 WBZ45x Sub-GHz MICRF TX CLICK
 
 <img src="docs/IoT-Made-Easy-Logo.png" width=100>
 
 
 > "IoT Made Easy!" 
 
-Devices: **| PIC32CXBZ2 | WBZ45x |**<br>
-Features: **| BLE SENSOR | MICRF112-433-EV |**
+Devices: **| PIC32CXBZ2 | WBZ45x | MICRF112 |**<br>
+Features: **| BLE SENSOR |**
 
 
 ## ⚠ Disclaimer
@@ -31,7 +31,7 @@ Checkout the <a href="https://microchipsupport.force.com/s/" target="_blank">Tec
 
 ## 1. Introduction<a name="step1">
 
-This application demonstrates the use of an MICRF112 433MHz as transmitter using ASK Modulation interfaced with the WBZ451 Curiosity Board which gets the RGB values from the Microchip Bluetooth Data ([(MBD)](https://play.google.com/store/apps/details?id=com.microchip.bluetooth.data&hl=en_IN&gl=US) application through Bluetooth Low Energy (BLE) using [BLE Sensor application](https://github.com/Microchip-MPLAB-Harmony/wireless_apps_pic32cxbz2_wbz45/tree/master/apps/ble/advanced_applications/ble_sensor). Then the RGB values are tranmitted through MICRF112.
+This application demonstrates the use of an MICRF TX CLICK 315MHz as transmitter using ASK Modulation interfaced with the WBZ451 Curiosity Board which gets the RGB values from the Microchip Bluetooth Data [(MBD)](https://play.google.com/store/apps/details?id=com.microchip.bluetooth.data&hl=en_IN&gl=US) application through Bluetooth Low Energy (BLE) using [BLE Sensor application](https://github.com/Microchip-MPLAB-Harmony/wireless_apps_pic32cxbz2_wbz45/tree/master/apps/ble/advanced_applications/ble_sensor). Then the RGB values are tranmitted through MICRF TX CLICK.
 
 ![](docs/Picture1.png)
 
@@ -44,20 +44,11 @@ The Data frame of the Transmitted data is shown below.
 | TOOLS | QUANTITY |
 | :- | :- |
 | [PIC32CX-BZ2 and WBZ451 Curiosity Development Board](https://www.microchip.com/en-us/development-tool/EV96B94A) | 1 |
-| [MICRF112-433 EVALBOARD](https://www.microchip.com/en-us/development-tool/MICRF112-433-EV) | 1 |
+| [MICRF TX CLICK](https://www.mikroe.com/micrf-tx-click) | 1 |
 
 ## 3. Hardware Setup<a name="step3">
 
-- Connect the MICRF112-433 EVALBOARD with the WBZ451 CURIOSITY BOARD using the below table.
-
-| MICRF112 | WBZ451		   | Description |
-| :- | :- | :- |
-| J1-1     |    3.3V       |     VDD     |
-| J1-2     | 	 GND 	   |     GND     |
-| J1-3     |  INT		   |     Data In|
-| J2-1     |  RST          |   Enable    |
-| J2-2     |       GND     |     GND     |
-| J2-3     |    N/C        |    N/C      |
+- Connect the MICRF TX CLICK BOARD with the WBZ451 CURIOSITY BOARD using the MIKROE BUS as shown below.
 
 ![](docs/micrf_1.png)
 
@@ -67,39 +58,39 @@ The Data frame of the Transmitted data is shown below.
 
 - [MPLAB X IDE ](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide#tabs)
 
-    - Version: 6.05
-	- XC32 Compiler v4.10
-	- MPLAB® Code Configurator v5.1.17
-	- PIC32CX-BZ_DFP v1.0.107
+    - Version: 6.20
+	- XC32 Compiler v4.40
+	- MPLAB® Code Configurator v5.5.1
+	- PIC32CX-BZ_DFP v1.4.243
 	- MCC Harmony
-	  - csp version: v3.13.1
-	  - core version: v3.11.1
-	  - CMSIS-FreeRTOS: v10.4.6
-	  - wireless_pic32cxbz_wbz: v1.0.0
-	  - wireless_ble: v1.0.0	  
-	  - dev_packs: v3.13.1
-	  - wolfssl version: v4.7.0
-	  - crypto version: v3.7.6
+	  - csp version: v3.18.5
+	  - core version: v3.13.4
+	  - CMSIS-FreeRTOS: v10.5.1
+	  - wireless_pic32cxbz_wbz: v1.5.0
+	  - wireless_ble: v1.2.0	  
+	  - dev_packs: v3.18.1
+	  - wolfssl version: v5.4.0
+	  - crypto version: v3.8.1
 	    
 
 - [Microchip Bluetooth Data (MBD) iOS/Android app](https://play.google.com/store/apps/details?id=com.microchip.bluetooth.data&hl=en_IN&gl=US)
 
-- [MPLAB X IPE v6.05](https://microchipdeveloper.com/ipe:installation)
+- [MPLAB X IPE v6.20](https://microchipdeveloper.com/ipe:installation)
 
 ## 5. Harmony MCC Configuration<a name="step5">
 
-### Getting started with MICRF112 with WBZ451 CURIOSITY BOARD.
+### Getting started with MICRF TX CLICK with WBZ451 CURIOSITY BOARD.
 
 | Tip | New users of MPLAB Code Configurator are recommended to go through the [overview](https://onlinedocs.microchip.com/pr/GUID-1F7007B8-9A46-4D03-AEED-650357BA760D-en-US-6/index.html?GUID-AFAB9227-B10C-4FAE-9785-98474664B50A) |
 | :- | :- |
 
 **Step 1** - Connect the WBZ451 CURIOSITY BOARD to the device/system using a micro-USB cable.
 
-**Step 2** - This application is built by using [WBZ45x BLE Sensor with ATTINY3217 Touch Demo](https://github.com/MicrochipTech/PIC32CXBZ2_WBZ45x_BLE_SENSOR_Touch_ATtiny3217) as the building block. The project graph of the WBZ45x BLE Sensor with ATTINY3217 Touch Demo application is shown below.
+**Step 2** - This application is built by using [WBZ45x BLE Sensor](https://github.com/Microchip-MPLAB-Harmony/wireless_apps_pic32cxbz2_wbz45/tree/master/apps/ble/advanced_applications/ble_sensor) as the building block. The project graph of the WBZ45x BLE Sensor application is shown below.
 
 ![](docs/Ble_sensor_project_graph.png)
 
-**Step 3** - In MCC harmony project graph add the TC0 module from device  Library->Harmony->peripherals->TC->TC0 and configure as shown below.
+**Step 3** - In MCC harmony project graph add the TC0 module from device Library->Harmony->peripherals->TC->TC0 and configure as shown below.
 
 ![](docs/tc0.png)
 
@@ -118,7 +109,7 @@ The Data frame of the Transmitted data is shown below.
 | Note: Download or clone the application to do the following steps !! |
 | --- |
 
-**Step 7** - From the unzipped folder copy the folder MICRF112 from WBZ451_MICRF112_114 to the folder firmware/src under your MPLAB Harmony v3 application project and add the Header (dvr_crc.h, dvr_micrf112.h, transmitter.h) and Source file (dvr_crc.c, dvr_micrf112.c, transmitter.c).
+**Step 7** - From the unzipped folder copy the folder MICRF112 from WBZ451_MICRF_TX to the folder firmware/src under your MPLAB Harmony v3 application project and add the Header (dvr_crc.h, dvr_micrf112.h, transmitter.h) and Source file (dvr_crc.c, dvr_micrf112.c, transmitter.c).
 
 - In the project explorer, Right click on folder Header Files and add a sub folder MICRF112 by selecting “Add Existing Items from Folders…”
 
@@ -162,9 +153,9 @@ The Data frame of the Transmitted data is shown below.
 
 **Step 8** - In your MPLAB Harmony v3 based application go to "firmware\src" and replace the app.h and app.c files from the link given below.
 
-- [app.h](https://github.com/MicrochipTech/PIC32CXBZ2_WBZ45x_Sub-GHz_MICRF112_114_MICRF220_219A_BLE_SENSOR/blob/main/WBZ451_MICRF112_114/firmware/src/app.h)
+- [app.h](https://github.com/MicrochipTech/PIC32CXBZ2_WBZ45x_Sub-GHz_MICRF_Tx_MICRF_Rx_Click_BLE_SENSOR/blob/main/WBZ451_MICRF_TX/firmware/src/app.h)
 
-- [app.c](https://github.com/MicrochipTech/PIC32CXBZ2_WBZ45x_Sub-GHz_MICRF112_114_MICRF220_219A_BLE_SENSOR/blob/main/WBZ451_MICRF112_114/firmware/src/app.c)
+- [app.c](https://github.com/MicrochipTech/PIC32CXBZ2_WBZ45x_Sub-GHz_MICRF_Tx_MICRF_Rx_Click_BLE_SENSOR/blob/main/WBZ451_MICRF_TX/firmware/src/app.c)
 
 **Step 9** - In your MPLAB Harmony v3 based application go to "firmware\src\app_ble\app_ble.c" and do the following changes.
 
@@ -179,7 +170,7 @@ The Data frame of the Transmitted data is shown below.
 - Edit/Replace the folllowing line.
 
 ```
-#define GAP_DEV_NAME_VALUE          "BLE_MICRF_112"
+#define GAP_DEV_NAME_VALUE          "BLE_MICRF_TX"
 ```
 
 ![](docs/app_ble.png)
@@ -205,9 +196,11 @@ BLE_GAP_SetDeviceAddr(&devAddr);
 
 ![](docs/id.png)
 	
-**Step 10** - In your MPLAB Harmony v3 based application go to "firmware\src\app_ble_sensor.c" and replace the app_ble_sensor.c files from the link given below.
+**Step 10** - In your MPLAB Harmony v3 based application go to "firmware\src" and replace the app_ble_sensor.h & the app_ble_sensor.c files from the link given below.
 
-- [app_ble_sensor.c](https://github.com/MicrochipTech/PIC32CXBZ2_WBZ45x_Sub-GHz_MICRF112_114_MICRF220_219A_BLE_SENSOR/blob/main/WBZ451_MICRF112_114/firmware/src/app_ble_sensor.c)
+- [app_ble_sensor.h](https://github.com/MicrochipTech/PIC32CXBZ2_WBZ45x_Sub-GHz_MICRF_Tx_MICRF_Rx_Click_BLE_SENSOR/blob/main/WBZ451_MICRF_TX/firmware/src/app_ble_sensor.h)
+
+- [app_ble_sensor.c](https://github.com/MicrochipTech/PIC32CXBZ2_WBZ45x_Sub-GHz_MICRF_Tx_MICRF_Rx_Click_BLE_SENSOR/blob/main/WBZ451_MICRF_TX/firmware/src/app_ble_sensor.c)
 
 **Step 11** - Clean and build the project. To run the project, select "Make and program device" button.
 
@@ -225,7 +218,8 @@ BLE_GAP_SetDeviceAddr(&devAddr);
 
 ### Program the precompiled hex file using MPLAB X IPE
 
-- The Precompiled hex file is given in the hex folder.
+- The Precompiled hex file is given in the [hex folder](https://github.com/MicrochipTech/PIC32CXBZ2_WBZ45x_Sub-GHz_MICRF_Tx_MICRF_Rx_Click_BLE_SENSOR/tree/main/hex).
+
 Follow the steps provided in the link to [program the precompiled hex file](https://microchipdeveloper.com/ipe:programming-device) using MPLABX IPE to program the pre-compiled hex image. 
 
 
@@ -233,7 +227,7 @@ Follow the steps provided in the link to [program the precompiled hex file](http
 
 The application folder can be found by navigating to the following path: 
 
-- "WBZ451_MICRF112_114/firmware/WBZ451_MICRF112_114.X"
+- "WBZ451_MICRF_TX/firmware/WBZ451_MICRF_TX.X"
 
 Follow the steps provided in the link to [Build and program the application](https://github.com/Microchip-MPLAB-Harmony/wireless_apps_pic32cxbz2_wbz45/tree/master/apps/ble/advanced_applications/ble_sensor#build-and-program-the-application-guid-3d55fb8a-5995-439d-bcd6-deae7e8e78ad-section).
 
