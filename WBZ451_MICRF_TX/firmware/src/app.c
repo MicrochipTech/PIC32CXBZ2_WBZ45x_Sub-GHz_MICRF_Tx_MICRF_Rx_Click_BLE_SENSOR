@@ -191,7 +191,7 @@ static void APP_Init(void)
       PPS_REGS->PPS_RPB5G3R = 22U;
     }	
     
-    SYS_CONSOLE_MESSAGE("\n\r MICRF 112/114 \n\r");
+    SYS_CONSOLE_MESSAGE("\n\r MICRF TX \n\r");
     TX_init();                                      // Initialize the transmitter module
     TX_setSerialNumber((serialNum_t)0x1234);        // Set the system serial number
 
