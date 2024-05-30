@@ -194,7 +194,14 @@ BLE_GAP_SetDeviceAddr(&devAddr);
 
 ![](docs/id.png)
 
-**Step 11** - To Know about the implimentation of ADC to RSSI conversion go to "firmware\src\MICRF220_219A\dvr_micrf220_219a.c" in your MPLAB Harmony v3 based application.
+**Step 11** - In your MPLAB Harmony v3 based application go to "firmware\src" and replace the app_ble_sensor.h & the app_ble_sensor.c files from the link given below.
+
+- [app_ble_sensor.h](https://github.com/MicrochipTech/PIC32CXBZ2_WBZ45x_Sub-GHz_MICRF_Tx_MICRF_Rx_Click_BLE_SENSOR/blob/main/WBZ451_MICRF_RX/firmware/src/app_ble_sensor.h)
+
+- [app_ble_sensor.c](https://github.com/MicrochipTech/PIC32CXBZ2_WBZ45x_Sub-GHz_MICRF_Tx_MICRF_Rx_Click_BLE_SENSOR/blob/main/WBZ451_MICRF_RX/firmware/src/app_ble_sensor.c)
+
+
+**Step 12** - To Know about the implimentation of ADC to RSSI conversion go to "firmware\src\MICRF220_219A\dvr_micrf220_219a.c" in your MPLAB Harmony v3 based application.
 
 - [dvr_micrf220.c](https://github.com/MicrochipTech/PIC32CXBZ2_WBZ45x_Sub-GHz_MICRF_Tx_MICRF_Rx_Click_BLE_SENSOR/blob/main/WBZ451_MICRF_RX/firmware/src/MICRF220/dvr_micrf220.c)
 
@@ -202,7 +209,7 @@ The RSSI values can be viewed in the COM PORT.
 
 ![](docs/rssi.png)
 
-**Step 12** - Clean and build the project. To run the project, select "Make and program device" button.
+**Step 13** - Clean and build the project. To run the project, select "Make and program device" button.
 
 ## 6. Board Programming<a name="step6">
 
