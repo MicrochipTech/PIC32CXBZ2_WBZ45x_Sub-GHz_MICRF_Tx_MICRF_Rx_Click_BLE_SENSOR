@@ -1,4 +1,4 @@
-# PIC32CXBZ2_WBZ45x Sub-GHz MICRF112/114 with MICRF220/219A
+# PIC32CXBZ2 WBZ45x Sub-GHz MICRF TX CLICK with MICRF RX CLICK
 
 <img src="docs/IoT-Made-Easy-Logo.png" width=100>
 
@@ -26,7 +26,7 @@ Checkout the <a href="https://microchipsupport.force.com/s/" target="_blank">Tec
 
 ## 1. Introduction<a name="step1">
 
-This application demonstrates the use of an MICRF112 as transmitter and MICRF220/219A as receiver using ASK Modulation interfaced with the WBZ451 Curiosity board to control the RGB LED of the WBZ451 Curiosity board on receiver part. This LED can be controlled by Microchip Bluetooth Data [(MBD)](https://play.google.com/store/apps/details?id=com.microchip.bluetooth.data&hl=en_IN&gl=US) application through Bluetooth Low Energy (BLE) using [BLE Sensor application](https://github.com/Microchip-MPLAB-Harmony/wireless_apps_pic32cxbz2_wbz45/tree/master/apps/ble/advanced_applications/ble_sensor).
+This application demonstrates the use of an MICRF TX CLICK as transmitter and MICRF RX CLICK as receiver using ASK Modulation interfaced with the WBZ451 Curiosity board to control the RGB LED of the WBZ451 Curiosity board on receiver part. This LED can be controlled by Microchip Bluetooth Data [(MBD)](https://play.google.com/store/apps/details?id=com.microchip.bluetooth.data&hl=en_IN&gl=US) application through Bluetooth Low Energy (BLE) using [BLE Sensor application](https://github.com/Microchip-MPLAB-Harmony/wireless_apps_pic32cxbz2_wbz45/tree/master/apps/ble/advanced_applications/ble_sensor).
 
 ![](docs/Picture1.png)
 
@@ -37,11 +37,11 @@ The [BLE Sensor application](https://github.com/Microchip-MPLAB-Harmony/wireless
 
 ![Alt Text](docs/micrf_working.gif)
 
-The above video shows the working of MICRF112(433MHz) and MICRF219A(433MHz).
+The above video shows the working of MICRF TX CLICK(315 MHz) and MICRF RX CLICK(315 MHz).
 
 ## 2. Contents<a name="step2">
 
-1. [WBZ451_MICRF112/114](https://github.com/MicrochipTech/PIC32CXBZ2_WBZ45x_Sub-GHz_MICRF112_114_MICRF220_219A_BLE_SENSOR/tree/main/WBZ451_MICRF112_114)
+1. [WBZ451_MICRF_TX](https://github.com/MicrochipTech/PIC32CXBZ2_WBZ45x_Sub-GHz_MICRF_Tx_MICRF_Rx_Click_BLE_SENSOR/tree/main/WBZ451_MICRF_TX)
 
-2. [WBZ451_MICRF220/219A](https://github.com/MicrochipTech/PIC32CXBZ2_WBZ45x_Sub-GHz_MICRF112_114_MICRF220_219A_BLE_SENSOR/tree/main/WBZ451_MICRF220_219A)
+2. [WBZ451_MICRF_RX](https://github.com/MicrochipTech/PIC32CXBZ2_WBZ45x_Sub-GHz_MICRF_Tx_MICRF_Rx_Click_BLE_SENSOR/tree/main/WBZ451_MICRF_RX)
 
