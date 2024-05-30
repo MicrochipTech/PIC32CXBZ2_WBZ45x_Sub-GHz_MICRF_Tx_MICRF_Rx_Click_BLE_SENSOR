@@ -33,7 +33,7 @@ This application demonstrates the use of an MICRF TX CLICK as transmitter and MI
 | Note: For more details on the working of BLE sensor application, refer to the link [here](https://github.com/Microchip-MPLAB-Harmony/wireless_apps_pic32cxbz2_wbz45/tree/master/apps/ble/advanced_applications/ble_sensor) !! |
 | --- |
 
-The [BLE Sensor application](https://github.com/Microchip-MPLAB-Harmony/wireless_apps_pic32cxbz2_wbz45/tree/master/apps/ble/advanced_applications/ble_sensor) is implemented on both transmitter part and receiver part to control the RGB LED. The RGB values are received from the (MBD) application using BLE Sensor application and then it is transmitted through MICRF112. The MICRF220/219A receives the RGB values and updates the RGB LED.
+The [BLE Sensor application](https://github.com/Microchip-MPLAB-Harmony/wireless_apps_pic32cxbz2_wbz45/tree/master/apps/ble/advanced_applications/ble_sensor) is implemented on both transmitter part and receiver part to control the RGB LED. The RGB values are received from the (MBD) application using BLE Sensor application and then it is transmitted through MICRF TX CLICK. The MICRF RX CLICK receives the RGB values and updates the RGB LED.
 
 ![Alt Text](docs/micrf_working.gif)
 
