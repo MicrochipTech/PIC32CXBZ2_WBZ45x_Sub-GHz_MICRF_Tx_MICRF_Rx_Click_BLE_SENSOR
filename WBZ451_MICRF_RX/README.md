@@ -1,12 +1,12 @@
-# PIC32CXBZ2_WBZ45x_Sub-GHz_MICRF220/219A
+# PIC32CXBZ2 WBZ45x Sub-GHz MICRF RX CLICK
 
 <img src="docs/IoT-Made-Easy-Logo.png" width=100>
 
 
 > "IoT Made Easy!" 
 
-Devices: **| PIC32CXBZ2 | WBZ45x |**<br>
-Features: **| BLE SENSOR | MICRF220-433-EV | MICRF219A-433-EV |**
+Devices: **| PIC32CXBZ2 | WBZ45x | MICRF RX CLICK |**<br>
+Features: **| BLE SENSOR |**
 
 
 ## ⚠ Disclaimer
@@ -31,7 +31,7 @@ Checkout the <a href="https://microchipsupport.force.com/s/" target="_blank">Tec
 
 ## 1. Introduction<a name="step1">
 
-This application demonstrates the use of an MICRF220/219A as receiver using ASK Modulation interfaced with the WBZ451 Curiosity Board to control the RGB LED of the WBZ451 Curiosity board with the data received from the MICRF112.
+This application demonstrates the use of an MICRF RX CLICK as receiver using ASK Modulation interfaced with the WBZ451 Curiosity Board to control the RGB LED of the WBZ451 Curiosity board with the data received from the MICRF TX CLICK.
 
 ![](docs/Picture1.png)
 
@@ -40,58 +40,47 @@ This application demonstrates the use of an MICRF220/219A as receiver using ASK 
 | TOOLS | QUANTITY |
 | :- | :- |
 | [PIC32CX-BZ2 and WBZ451 Curiosity Development Board](https://www.microchip.com/en-us/development-tool/EV96B94A) | 1 |
-| [MICRF220-433 EVALBOARD](https://www.microchip.com/en-us/development-tool/MICRF220-433-EV) | 1 |
+| [MICRF RX CLICK](https://www.mikroe.com/micrf-rx-click) | 1 |
 
 ## 3. Hardware Setup<a name="step3">
 
-- Connect the MICRF220-433 EVALBOARD with the WBZ451 CURIOSITY BOARD using the below table.
+- Connect the MICRF RX CLICK BOARD with the WBZ451 CURIOSITY BOARD using the MIKROE BUS as shown below.
 
-| MICRF220/219A | WBZ451		   | Description |
-| :- | :- | :- |
-| VDD     |    3.3V       |     VDD     |
-| GND     | 	 GND 	   |     GND     |
-| DO     |  PWM		   |     Data Out|
-| SCLK     |  NC          |   SCLK    |
-| SHDN    |       NC     |     Shutdown     |
-| RSSI     |    AN        |    RSSI Noise      |
-
-![](docs/micrf_1.png)
-
-![](docs/micrf_2.png)
+![](docs/micrf_1.png) ![](docs/micrf_2.png)
 
 ## 4. Software Setup<a name="step4">
 
 - [MPLAB X IDE ](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide#tabs)
 
-    - Version: 6.05
-	- XC32 Compiler v4.10
-	- MPLAB® Code Configurator v5.1.17
-	- PIC32CX-BZ_DFP v1.0.107
+    - Version: 6.20
+	- XC32 Compiler v4.40
+	- MPLAB® Code Configurator v5.5.1
+	- PIC32CX-BZ_DFP v1.4.243
 	- MCC Harmony
-	  - csp version: v3.13.1
-	  - core version: v3.11.1
-	  - CMSIS-FreeRTOS: v10.4.6
-	  - wireless_pic32cxbz_wbz: v1.0.0
-	  - wireless_ble: v1.0.0	  
-	  - dev_packs: v3.13.1
-	  - wolfssl version: v4.7.0
-	  - crypto version: v3.7.6
+	  - csp version: v3.18.5
+	  - core version: v3.13.4
+	  - CMSIS-FreeRTOS: v10.5.1
+	  - wireless_pic32cxbz_wbz: v1.5.0
+	  - wireless_ble: v1.2.0	  
+	  - dev_packs: v3.18.1
+	  - wolfssl version: v5.4.0
+	  - crypto version: v3.8.1
 	    
 
 - [Microchip Bluetooth Data (MBD) iOS/Android app](https://play.google.com/store/apps/details?id=com.microchip.bluetooth.data&hl=en_IN&gl=US)
 
-- [MPLAB X IPE v6.05](https://microchipdeveloper.com/ipe:installation)
+- [MPLAB X IPE v6.20](https://microchipdeveloper.com/ipe:installation)
 
 ## 5. Harmony MCC Configuration<a name="step5">
 
-### Getting started with MICRF220/219A with WBZ451 CURIOSITY BOARD.
+### Getting started with MICRF RX CLICK with WBZ451 CURIOSITY BOARD.
 
 | Tip | New users of MPLAB Code Configurator are recommended to go through the [overview](https://onlinedocs.microchip.com/pr/GUID-1F7007B8-9A46-4D03-AEED-650357BA760D-en-US-6/index.html?GUID-AFAB9227-B10C-4FAE-9785-98474664B50A) |
 | :- | :- |
 
 **Step 1** - Connect the WBZ451 CURIOSITY BOARD to the device/system using a micro-USB cable.
 
-**Step 2** - This application is built by using [WBZ45x BLE Sensor with ATTINY3217 Touch Demo](https://github.com/MicrochipTech/PIC32CXBZ2_WBZ45x_BLE_SENSOR_Touch_ATtiny3217) as the building block. The project graph of the WBZ45x BLE Sensor with ATTINY3217 Touch Demo application is shown below.
+**Step 2** - This application is built by using [WBZ45x BLE Sensor](https://github.com/Microchip-MPLAB-Harmony/wireless_apps_pic32cxbz2_wbz45/tree/master/apps/ble/advanced_applications/ble_sensor) as the building block. The project graph of the WBZ45x BLE Sensor application is shown below.
 
 ![](docs/Ble_sensor_project_graph.png)
 
@@ -118,9 +107,9 @@ This application demonstrates the use of an MICRF220/219A as receiver using ASK 
 | Note: Download or clone the application to do the following steps !! |
 | --- |
 
-**Step 8** - From the unzipped folder copy the folder MICRF220_219A from WBZ451_MICRF112_114 to the folder firmware/src under your MPLAB Harmony v3 application project and add the Header (dvr_crc.h, dvr_micrf112.h, transmitter.h) and Source file (dvr_crc.c, dvr_micrf112.c, transmitter.c).
+**Step 8** - From the unzipped folder copy the folder MICRF220 from WBZ451_MICRF_RX to the folder firmware/src under your MPLAB Harmony v3 application project and add the Header (dvr_adc.h, dvr_crc.h, dvr_micrf220.h, manchester.h, receiver.h) and Source file (dvr_adc.c, dvr_crc.c, dvr_micrf220.c, manchester.c, receiver.c).
 
-- In the project explorer, Right click on folder Header Files and add a sub folder MICRF220_219A by selecting “Add Existing Items from Folders…”
+- In the project explorer, Right click on folder Header Files and add a sub folder MICRF220 by selecting “Add Existing Items from Folders…”
 
 ![](docs/header_add.png)
 
@@ -128,7 +117,7 @@ This application demonstrates the use of an MICRF220/219A as receiver using ASK 
 
 ![](docs/header_add2.png)
 
-- Select the “MICRF220_219A” folder and select “Files of Types” as Header Files.
+- Select the “MICRF220” folder and select “Files of Types” as Header Files.
 
 ![](docs/header_add3.png)
 
@@ -136,11 +125,11 @@ This application demonstrates the use of an MICRF220/219A as receiver using ASK 
 
 ![](docs/header_add4.png)
  
-- The MICRF220_219A header files gets added to your project.
+- The MICRF220 header files gets added to your project.
 
 ![](docs/header_add5.png)
 
-- In the project explorer, Right click on folder Source Files and add a sub folder MICRF220_219A by selecting “Add Existing Items from Folders…”.
+- In the project explorer, Right click on folder Source Files and add a sub folder MICRF220 by selecting “Add Existing Items from Folders…”.
 
 ![](docs/source_add.png)
 
@@ -148,7 +137,7 @@ This application demonstrates the use of an MICRF220/219A as receiver using ASK 
 
 ![](docs/source_add2.png)
 
-- Select the “MICRF220_219A” folder and select “Files of Types” as Source Files.
+- Select the “MICRF220” folder and select “Files of Types” as Source Files.
 
 ![](docs/source_add3.png)
 
@@ -162,9 +151,9 @@ This application demonstrates the use of an MICRF220/219A as receiver using ASK 
 
 **Step 9** - In your MPLAB Harmony v3 based application go to "firmware\src" and replace the app.h and app.c files from the link given below.
 
-- [app.h](https://github.com/MicrochipTech/PIC32CXBZ2_WBZ45x_Sub-GHz_MICRF112_114_MICRF220_219A_BLE_SENSOR/blob/main/WBZ451_MICRF220_219A/firmware/src/app.h)
+- [app.h](https://github.com/MicrochipTech/PIC32CXBZ2_WBZ45x_Sub-GHz_MICRF_Tx_MICRF_Rx_Click_BLE_SENSOR/blob/main/WBZ451_MICRF_RX/firmware/src/app.h)
 
-- [app.c](https://github.com/MicrochipTech/PIC32CXBZ2_WBZ45x_Sub-GHz_MICRF112_114_MICRF220_219A_BLE_SENSOR/blob/main/WBZ451_MICRF220_219A/firmware/src/app.c)
+- [app.c](https://github.com/MicrochipTech/PIC32CXBZ2_WBZ45x_Sub-GHz_MICRF_Tx_MICRF_Rx_Click_BLE_SENSOR/blob/main/WBZ451_MICRF_RX/firmware/src/app.c)
 
 **Step 10** - In your MPLAB Harmony v3 based application go to "firmware\src\app_ble\app_ble.c" and do the following changes.
 
@@ -179,7 +168,7 @@ This application demonstrates the use of an MICRF220/219A as receiver using ASK 
 - Edit/Replace the folllowing line.
 
 ```
-#define GAP_DEV_NAME_VALUE          "BLE_MICRF_219A"
+#define GAP_DEV_NAME_VALUE          "BLE_MICRF_RX"
 ```
 
 ![](docs/app_ble.png)
@@ -207,7 +196,7 @@ BLE_GAP_SetDeviceAddr(&devAddr);
 
 **Step 11** - To Know about the implimentation of ADC to RSSI conversion go to "firmware\src\MICRF220_219A\dvr_micrf220_219a.c" in your MPLAB Harmony v3 based application.
 
-- [dvr_micrf220_219a.c](https://github.com/MicrochipTech/PIC32CXBZ2_WBZ45x_Sub-GHz_MICRF112_114_MICRF220_219A_BLE_SENSOR/blob/main/WBZ451_MICRF220_219A/firmware/src/MICRF220_219A/dvr_micrf220_219a.c)
+- [dvr_micrf220.c](https://github.com/MicrochipTech/PIC32CXBZ2_WBZ45x_Sub-GHz_MICRF_Tx_MICRF_Rx_Click_BLE_SENSOR/blob/main/WBZ451_MICRF_RX/firmware/src/MICRF220/dvr_micrf220.c)
 
 The RSSI values can be viewed in the COM PORT.
 
@@ -221,7 +210,8 @@ The RSSI values can be viewed in the COM PORT.
 
 ### Program the precompiled hex file using MPLAB X IPE
 
-- The Precompiled hex file is given in the hex folder.
+- The Precompiled hex file is given in the [hex folder](https://github.com/MicrochipTech/PIC32CXBZ2_WBZ45x_Sub-GHz_MICRF_Tx_MICRF_Rx_Click_BLE_SENSOR/tree/main/hex).
+
 Follow the steps provided in the link to [program the precompiled hex file](https://microchipdeveloper.com/ipe:programming-device) using MPLABX IPE to program the pre-compiled hex image. 
 
 
@@ -229,7 +219,7 @@ Follow the steps provided in the link to [program the precompiled hex file](http
 
 The application folder can be found by navigating to the following path: 
 
-- "WBZ451_MICRF220_219A/firmware/WBZ451_MICRF220_219A.X"
+- "WBZ451_MICRF_RX/firmware/WBZ451_MICRF_RX.X"
 
 Follow the steps provided in the link to [Build and program the application](https://github.com/Microchip-MPLAB-Harmony/wireless_apps_pic32cxbz2_wbz45/tree/master/apps/ble/advanced_applications/ble_sensor#build-and-program-the-application-guid-3d55fb8a-5995-439d-bcd6-deae7e8e78ad-section).
 

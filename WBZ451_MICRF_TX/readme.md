@@ -50,9 +50,7 @@ The Data frame of the Transmitted data is shown below.
 
 - Connect the MICRF TX CLICK BOARD with the WBZ451 CURIOSITY BOARD using the MIKROE BUS as shown below.
 
-![](docs/micrf_1.png)
-
-![](docs/micrf_2.png) ![](docs/micrf_3.png)
+![](docs/micrf_1.png) ![](docs/micrf_2.png)
 
 ## 4. Software Setup<a name="step4">
 
