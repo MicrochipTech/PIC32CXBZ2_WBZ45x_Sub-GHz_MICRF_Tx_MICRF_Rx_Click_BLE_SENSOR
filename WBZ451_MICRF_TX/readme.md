@@ -5,7 +5,7 @@
 
 > "IoT Made Easy!" 
 
-Devices: **| PIC32CXBZ2 | WBZ45x | MICRF112 |**<br>
+Devices: **| PIC32CXBZ2 | WBZ45x | MICRF TX CLICK |**<br>
 Features: **| BLE SENSOR |**
 
 
