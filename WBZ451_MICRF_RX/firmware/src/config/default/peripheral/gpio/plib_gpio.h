@@ -77,6 +77,14 @@
 #define RF_DATA_IN_OutputEnable()      (GPIOA_REGS->GPIO_TRISCLR = (1U<<2U))
 #define RF_DATA_IN_InputEnable()       (GPIOA_REGS->GPIO_TRISSET = (1U<<2U))
 #define RF_DATA_IN_PIN                  GPIO_PIN_RA2
+/*** Macros for RST_SH pin ***/
+#define RST_SH_Set()               (GPIOB_REGS->GPIO_LATSET = (1U<<2U))
+#define RST_SH_Clear()             (GPIOB_REGS->GPIO_LATCLR = (1U<<2U))
+#define RST_SH_Toggle()            (GPIOB_REGS->GPIO_LATINV= (1U<<2U))
+#define RST_SH_Get()               ((GPIOB_REGS->GPIO_PORT >> 2U) & 0x1U)
+#define RST_SH_OutputEnable()      (GPIOB_REGS->GPIO_TRISCLR = (1U<<2U))
+#define RST_SH_InputEnable()       (GPIOB_REGS->GPIO_TRISSET = (1U<<2U))
+#define RST_SH_PIN                  GPIO_PIN_RB2
 
 
 // *****************************************************************************

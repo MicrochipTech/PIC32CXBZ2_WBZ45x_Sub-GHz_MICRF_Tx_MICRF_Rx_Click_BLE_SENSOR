@@ -817,8 +817,8 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
         <pack name="PIC32CX-BZ_DFP" vendor="Microchip" version="1.2.230"/>
+        <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
       </packs>
       <ScriptingSettings>
         <ScriptingSetting key="configuration.header.zota_manufacture_code"
@@ -1122,6 +1122,8 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="1000000-2001ffff"/>
+        <property key="programmerToGoFilePath"
+                  value="D:/REPO&apos;S/GITHUB/PIC32CXBZ2_WBZ45x_Sub-GHz_MICRF_Tx_MICRF_Rx_Click_BLE_SENSOR/WBZ451_MICRF_RX/firmware/WBZ451_MICRF_RX.X/debug/default/WBZ451_MICRF_RX_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>

@@ -51,8 +51,8 @@
 #include "crypto/crypto.h"
 #include "peripheral/rtc/plib_rtc.h"
 #include "peripheral/tc/plib_tc0.h"
-#include "peripheral/rcon/plib_rcon.h"
 #include "peripheral/tc/plib_tc3.h"
+#include "peripheral/rcon/plib_rcon.h"
 #include "peripheral/tc/plib_tc2.h"
 #include "peripheral/nvm/plib_nvm.h"
 #include "peripheral/adchs/plib_adchs.h"
@@ -90,6 +90,7 @@
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
 #include "ble/lib/include/bt_sys.h"
+#include "peripheral/sercom/usart/plib_sercom0_usart.h"
 /*******************************************************************************
 * Copyright (C) 2022 Microchip Technology Inc. and its subsidiaries.
 *
@@ -114,7 +115,6 @@
 *******************************************************************************/
 #include "driver/pds/include/pds.h"
 #include "driver/pds/include/pds_config.h"
-#include "peripheral/sercom/usart/plib_sercom0_usart.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gpio/plib_gpio.h"
 #include "peripheral/nvic/plib_nvic.h"
